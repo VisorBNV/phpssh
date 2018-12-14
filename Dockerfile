@@ -1,6 +1,6 @@
 FROM php:7.0-fpm-alpine
 
-RUN apk add --no-cache openssh gmp-dev libpng-dev
+RUN apk add --no-cache git openssh gmp-dev libpng-dev
 
 RUN docker-php-ext-install gmp && docker-php-ext-enable gmp
 RUN docker-php-ext-install bcmath && docker-php-ext-enable bcmath
