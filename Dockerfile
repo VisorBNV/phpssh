@@ -8,5 +8,6 @@ RUN docker-php-ext-install gd && docker-php-ext-enable gd
 
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+RUN composer global require hirak/prestissimo
 
 CMD [ "php-fpm" ]
